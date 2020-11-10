@@ -67,14 +67,16 @@
             </el-select>
           </el-form-item>
 
-           <el-form-item label="标签" prop="type">
-            <el-checkbox-group v-model="form.tag">
-              <el-checkbox label="HTML" name="type"></el-checkbox>
-              <el-checkbox label="CSS" name="type"></el-checkbox>
-              <el-checkbox label="JS" name="type"></el-checkbox>
-              <el-checkbox label="VUE" name="type"></el-checkbox>
-              <el-checkbox label="VUE" name="type"></el-checkbox>
-            </el-checkbox-group>
+           <el-form-item label="标签" :label-width="formLabelWidth">
+            <el-select v-model="form.tag" placeholder="请选择标签">
+              <el-option label="HTML" value="html"></el-option>
+              <el-option label="CSS" value="css"></el-option>
+              <el-option label="JS" value="js"></el-option>
+              <el-option label="VUE" value="vue"></el-option>
+              <el-option label="Boostrap" value="bootstrap"></el-option>
+              <el-option label="ES6" value="es6"></el-option>
+              <el-option label="其他" value="其他"></el-option>
+            </el-select>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
